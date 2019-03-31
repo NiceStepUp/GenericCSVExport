@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">Generic CSV Export</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Экспорт данных в CSV - сотрудники</h2>
+        <p>
+            Вы можете легко экспортировать данные о сотрудниках в  формат CSV, который может легко прочитать в MS Excel
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Person")">Узнать больше о CSV - сотрудники &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Экспорт данных в CSV - Подразделения</h2>
+        <p>Вы можете легко экспортировать данные о подразделениях в  формат CSV, который может легко прочитать в MS Excel</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Department")">Узнать больше о CSV - отдел &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Что такое CSV</h2>
+        <p>CSV (от англ. Comma-Separated Values — значения, разделённые запятыми) — текстовый формат, предназначенный для представления табличных данных.</p>
+        <p><a class="btn btn-default" href="https://ru.wikipedia.org/wiki/CSV">Узнать больше о CSV &raquo;</a></p>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<GenericCSVExport.Core.ViewModel.DepartmentViewModel>
+@{
+    ViewBag.Title = "Список подразделений";
+}
+
+<h1>Отделы</h1>
+
+@* Cтили и классы для таблички можно посмотреть здесь:
+    https://getbootstrap.com/docs/4.3/content/tables/
+    Для нашей таблички мы примиенили класс "table table-bordered" для отображения границ между таблицами.
+*@
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Отдел
+        </th>
+        <th>
+            Бюро
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.DepartmentName)*@
+                <a href="/api/Department/Download?id=@item.IdDepartment"> @item.DepartmentName</a>
+            </td>
+            <td>
+                @foreach (var bureau in item.Bureaus)
+                {
+                    <p>@bureau.Name</p>
+                }
+            </td>
+        </tr>
+    }
+
+</table>

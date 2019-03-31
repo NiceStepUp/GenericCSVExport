@@ -1,0 +1,15 @@
+﻿@model IEnumerable<GenericCSVExport.Core.ViewModel.PersonViewModel>
+@{
+    ViewBag.Title = "Список сотрудников";
+}
+
+<h1>Сотрудники</h1>
+
+<ul>
+    @foreach (var person in Model)
+    {
+    <li>
+        <a href="/api/Person/Download?id=@person.IdPerson"> @person.FirstName</a>        
+    </li>
+    }
+</ul>
